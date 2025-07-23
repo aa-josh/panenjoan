@@ -74,7 +74,22 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-.wrapper1 .title1 h1 {
+.wrapper2 {
+  background-color: #100a2e;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 100vw;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper1 .title1 h1,
+.wrapper2 .title2 h1 {
   color: green;
   text-align: center;
   margin-bottom: 25px;
