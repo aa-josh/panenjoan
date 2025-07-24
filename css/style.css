@@ -95,24 +95,47 @@ section {
   font-size: 3.5rem;
 }
 
+.title1 h1 {
+  margin-top: 2rem;
+}
+
 .contact-form {
   display: flex;
 }
 
+.nama,
+.pesan {
+  color: #100a2e;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.input-nama,
+.input-pesan {
+  border: 2px solid rgb(206, 231, 243); /* Ketebalan 2px, garis solid, warna hitam */
+  padding: 10px; /* Jarak isi ke bingkai */
+  width: 300px;
+  border-radius: 10px; /* Semakin besar angkanya, semakin tumpul/melengkung */
+  background-color: #edf3fa;
+  text-align: center;
+  color: #031668;
+}
+
 .uil {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 .input-fields {
   display: flex;
   flex-direction: column;
-  margin-right: 4%;
+  align-items: center;
+  /* margin-right: 4%; */
 }
 
 .input-fields,
 .msg {
-  width: 60%;
+  width: 100%;
 }
 
 .input-fields .input,
