@@ -112,11 +112,10 @@ section {
 
 .input-nama,
 .input-pesan {
-  border: 2px solid rgb(206, 231, 243); /* Ketebalan 2px, garis solid, warna hitam */
+  border-bottom: 2px solid rgb(152, 167, 173); /* Ketebalan 2px, garis solid, warna hitam */
   padding: 10px; /* Jarak isi ke bingkai */
   width: 300px;
   border-radius: 10px; /* Semakin besar angkanya, semakin tumpul/melengkung */
-  background-color: #edf3fa;
   text-align: center;
   color: #031668;
 }
