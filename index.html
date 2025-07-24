@@ -248,41 +248,28 @@
       </div>
     </section>
     <!-- Lokasi -->
-    <section class="contact" id="contact">
+    <section class="contact-form" id="contact">
       <div class="wrapper1">
         <div class="title1">
           <h1>Hubungi Kami</h1>
         </div>
-        <div class="contact-form">
-          <form method="post" action="contact_us.php">
-            <div class="input-fields">
-              <input type="text" class="input" placeholder="Nama" name="name" />
-              <input
-                type="email"
-                class="input"
-                placeholder="alamat"
-                name="email"
-              />
-              <input
-                type="phone"
-                class="input"
-                placeholder="No. telpon"
-                name="phone"
-              />
-              <!-- <input type="text" class="input"  placeholder="Subject" name="subject"> -->
-            </div>
-            <div class="msg">
-              <textarea placeholder="Pesan" name="message">
-Saya Tertarik Dengan Tempat Ini</textarea
-              >
-              <br />
-              <a
-                class="btn1"
-                href="https://wa.me/6285703077825?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda"
-                ><i class="uil uil-whatsapp"></i>Kirim</a
-              >
-              <!-- <div class="btn1"><button type="submit">send <i class="uil uil-whatsapp"></i></div> -->
-            </div>
+        <div class="msg">
+          <form id="waForm" class="input-fields">
+            <label class="nama">Nama:</label>
+            <input class="input-nama" type="text" id="nama" required /><br />
+
+            <label class="pesan">Pesan:</label><br />
+            <textarea
+              class="input-pesan"
+              type="text"
+              id="pesan"
+              required
+            ></textarea
+            ><br /><br />
+
+            <button class="btn1" type="submit">
+              <i class="uil uil-whatsapp"></i> Kirim
+            </button>
           </form>
         </div>
       </div>
@@ -340,5 +327,26 @@ Saya Tertarik Dengan Tempat Ini</textarea
     </section>
     <!-- footer section ends -->
     <script src="js/script.js"></script>
+    <script>
+      document
+        .getElementById("waForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Ambil nilai dari form
+          var nama = document.getElementById("nama").value;
+          var pesan = document.getElementById("pesan").value;
+
+          // Format pesan
+          var fullPesan = "Halo, saya : " + nama + "%0A" + pesan;
+
+          // Nomor tujuan (gunakan format internasional tanpa + atau spasi)
+          var noWhatsApp = "6285703077825"; // Ganti dengan nomor tujuan kamu
+
+          // Buka WhatsApp
+          var url = "https://wa.me/" + noWhatsApp + "?text=" + fullPesan;
+          window.open(url, "_blank");
+        });
+    </script>
   </body>
 </html>
