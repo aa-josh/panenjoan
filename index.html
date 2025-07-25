@@ -80,45 +80,99 @@
 
       <div class="box-container">
         <div class="box">
-          <img src="images/kemah.jpg" alt="perkemahan.img" />
+          <img
+            src="images/kemah.jpg"
+            alt="Foto area perkemahan edukasi"
+            onclick="showImage(this)"
+          />
           <h3>area perkemahan</h3>
           <p>Kami menyediakan area perkemahan edukasi pedesaan</p>
           <a href="" class="btn">read more</a>
         </div>
 
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
         <div class="box">
-          <img src="images/joging-track.jpg" alt="Jogging-Track.img" />
+          <img
+            src="images/joging-track.jpg"
+            alt="Foto area jogging track"
+            onclick="showImage(this)"
+          />
           <h3>Jogging Track</h3>
           <p>Joging area bernuansa alam yang sejuk khas pedesaan</p>
           <a href="" class="btn">read more</a>
         </div>
 
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
         <div class="box">
-          <img src="images/kolam.jpg" alt="kolam.img" />
+          <img
+            src="images/kolam.jpg"
+            alt="Foto area kolam alam"
+            onclick="showImage(this)"
+          />
           <h3>Kolam Alam</h3>
           <p>Kolam alami kkas pedesaan cocok untuk edukasi</p>
           <a href="" class="btn">read more</a>
         </div>
 
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
         <div class="box">
-          <img src="images/gazebo.jpg" alt="gazebo.img" />
+          <img
+            src="images/gazebo.jpg"
+            alt="Foto gazebo"
+            onclick="showImage(this)"
+          />
           <h3>Gazebo</h3>
           <p>Istirahat sejenak dengan sensasi sejuknya alam pedesaan</p>
           <a href="" class="btn">read more</a>
         </div>
 
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
         <div class="box">
-          <img src="images/stage.jpg" alt="stage.img" />
+          <img
+            src="images/stage.jpg"
+            alt="Foto panggung pertunjukan"
+            onclick="showImage(this)"
+          />
           <h3>Panggung Pagelaran</h3>
           <p>Menampilkan kesenian daerah khas desa kami</p>
           <a href="" class="btn">read more</a>
         </div>
 
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
+        </div>
+
         <div class="box">
-          <img src="images/meeting.jpg" alt="meeting.img" />
+          <img
+            src="images/meeting.jpg"
+            alt="Fotoaula pertemuan"
+            onclick="showImage(this)"
+          />
           <h3>Gedung Pertemuan</h3>
           <p>Jadikan suasa pertemuan menjadi lebih tenang dan sejuk</p>
           <a href="" class="btn">read more</a>
+        </div>
+
+        <!-- Popup Lightbox -->
+        <div id="lightbox" onclick="hideImage()">
+          <img id="lightbox-img" src="" alt="Zoomed Image" />
         </div>
       </div>
     </section>
@@ -361,6 +415,18 @@
           var url = "https://wa.me/" + noWhatsApp + "?text=" + fullPesan;
           window.open(url, "_blank");
         });
+    </script>
+    <script>
+      function showImage(imgElement) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = imgElement.src;
+        lightbox.style.display = "flex";
+      }
+
+      function hideImage() {
+        document.getElementById("lightbox").style.display = "none";
+      }
     </script>
   </body>
 </html>
