@@ -514,7 +514,12 @@ form label:hover {
   padding: 1rem 0;
 }
 
-.footer .box-container .box a i {
+.footer .box-container .box a {
+  font-family: "Roboto", sans-serif;
+  text-transform: none;
+}
+
+.footer .box-container .box i {
   color: #219150;
   padding-right: 0.5rem;
 }
