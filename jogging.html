@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./images/logo2.png" />
+    <title>Jogging Track</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Iconscout Link  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <link rel="stylesheet" href="css/kemah.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-40DW95ZSKZ");
+    </script>
+    <style>
+      body {
+        background-color: #f9f9f9;
+      }
+
+      .header a {
+        text-decoration: none;
+        color: white;
+      }
+
+      #search-btn,
+      #menu-btn {
+        color: white;
+        font-size: 1.5rem; /* opsional, bisa kamu ubah */
+        cursor: pointer;
+      }
+
+      .header .navbar.active {
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #e2e8ee;
+      }
+      .hero {
+        height: 100vh;
+        background: url("images/jogging2.jpg") center center/cover no-repeat;
+        color: white;
+        padding: 1 1;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero .container {
+        height: 100%;
+      }
+
+      .hero h1 {
+        padding-top: 7rem;
+        margin-top: 10rem;
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+          1px 1px 0 black;
+      }
+
+      .hero p {
+        margin-bottom: 5rem;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+          1px 1px 0 black;
+      }
+
+      .custom-btn {
+        /* background-color: #ffffff; */
+        color: #e2e8ee;
+        border: 1px solid black;
+        transition: 0.3s ease;
+        margin-top: 10rem;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+          1px 1px 0 black;
+      }
+
+      .custom-btn:hover {
+        background-color: #212529;
+        color: #ffffff;
+      }
+
+      .section-title {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #e2e8ee;
+        font-size: 3rem;
+      }
+
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .footer a {
+        text-decoration: none;
+      }
+
+      /* Lightbox */
+      #lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1050;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+      }
+
+      #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        box-shadow: 0 0 20px #fff;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <a href="#" class="logo text-light" style="mix-blend-mode: difference"
+        ><i class="fas fa-hiking"></i> Panenjoan</a
+      >
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times text-light"></div>
+        <a href="index.html" class="text-light">home</a>
+        <a href="index.html#category" class="text-light">jelajah</a>
+        <a href="index.html#packages" class="text-light">paket wisata</a>
+        <a href="index.html#location" class="text-light">lokasi kami</a>
+        <a href="index.html#contact" class="text-light">contact</a>
+      </nav>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1>Jogging Track Area</h1>
+        <p class="fs-2">
+          Berlari dari kenyataan diiringi nyanyian alam yang syahdu, dan udara
+          yang begitu sejuk, menyehatkan jiwa dan raga.
+        </p>
+        <a href="#fasilitas" class="btn custom-btn">Jelajahi</a>
+      </div>
+    </section>
+
+    <!-- Fasilitas Section -->
+    <section id="fasilitas">
+      <div class="container">
+        <h2 class="section-title">Mereka yang Berlari</h2>
+        <div class="row">
+          <!-- Kartu 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging2.jpg"
+                alt="Joging"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Area Tenda</h5>
+                <p class="card-text">Lari dari Kenyataan.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging3.jpg"
+                alt="jogging"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Api Unggun</h5>
+                <p class="card-text">Lari dari setoran.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging4.jpg"
+                alt="jogging"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Edukasi</h5>
+                <p class="card-text">Dari dari Tagihan</p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging5.jpg"
+                alt="jogging"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Edukasi</h5>
+                <p class="card-text">Ikut ikutan lari</p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging6.jpg"
+                alt="jogging"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Edukasi</h5>
+                <p class="card-text">No comment</p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/jogging7.jpg"
+                alt="Kegiatan Edukasi"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Edukasi</h5>
+                <p class="card-text">
+                  Program belajar alam, pertanian, dan budaya lokal untuk anak
+                  dan remaja.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu 7 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="images/joging-track.jpg"
+                alt="Kegiatan Edukasi"
+                class="card-img-top"
+                onclick="showImage(this)"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Edukasi</h5>
+                <p class="card-text">
+                  Program belajar alam, pertanian, dan budaya lokal untuk anak
+                  dan remaja.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox for images -->
+    <div id="lightbox" onclick="hideImage()">
+      <img id="lightbox-img" src="" alt="Popup" />
+    </div>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Link Cepat</h3>
+          <a href="index.html">Beranda</a>
+          <a href="#hero">Home</a>
+          <a href="#fasilitas">Fasilitas</a>
+        </div>
+
+        <div class="box">
+          <h3>link eksta</h3>
+          <a href="index.html#contact">Tanya</a>
+          <a href="./hak cipta/terms_of_use.html">Terms Of Use</a>
+          <a href="./hak cipta/privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="tel:+6285703077825">
+            <i class="fas fa-phone"></i> +62 85703077825
+          </a>
+          <a href="mailto: aasony871@gmail.com">
+            <i class="fas fa-envelope"></i> panenjoan@gmail.com
+          </a>
+          <a href="#"> <i class="fas fa-map"></i> Majalaya, Bandung - 40382 </a>
+        </div>
+
+        <div class="box">
+          <h3>ikuti kami</h3>
+          <a href="https://www.facebook.com/abi.ajoz.3">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/ayah.josh/">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.tiktok.com/@soni_son5">
+            <i class="fab fa-tiktok"></i> Tiktok
+          </a>
+          <a href="https://www.youtube.com/@amanahtv553">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+        </div>
+      </div>
+      <div class="credit">
+        <p>&copy; 2025</p>
+        by
+        <span><a href="tel:+6285703077825">jOsh </a></span>
+        | all rights reserved!
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+    <script>
+      function showImage(imgElement) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = imgElement.src;
+        lightbox.style.display = "flex";
+      }
+
+      function hideImage() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
