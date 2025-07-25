@@ -103,11 +103,12 @@ section {
   position: relative;
   padding-bottom: 56.25%; /* rasio 16:9 */
   height: 0;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
-  max-width: 100%;
+  max-width: 92%;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
 }
 
 .video-container video {
