@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#fasilitas {
+  background-image: url(../images/kemah2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
